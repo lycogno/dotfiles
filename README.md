@@ -1,5 +1,5 @@
 ```
-$ uvx git+https://github.com/avamsi/dotfiles
+$ uvx git+https://github.com/lycogno/dotfiles
 ```
 
 ```
