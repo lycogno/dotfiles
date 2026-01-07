@@ -1,7 +1,7 @@
 ```
-$ uvx git+https://github.com/lycogno/dotfiles
+uvx git+https://github.com/lycogno/dotfiles
 ```
 
 ```
-$ git submodule update --remote
+git submodule update --remote
 ```
