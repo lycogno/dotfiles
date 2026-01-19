@@ -2,8 +2,8 @@
 '$schema' = 'https://jj-vcs.github.io/jj/latest/config-schema.json'
 
 [user]
-	name = 'Vamsi Avula'
-	email = 'avamsi07@gmail.com'
+	name = 'Vishnu Hari'
+	email = '33627388+lycogno@users.noreply.github.com'
 
 [revset-aliases]
 	archived = 'description(glob:"(jj archive)*")'
@@ -139,7 +139,7 @@
 	watchman.register-snapshot-trigger = true
 
 [git]
-	auto-local-bookmark = true
+	remotes.origin.auto-track-bookmarks = true
 	colocate = true
 	push = 'fork'
 
