@@ -11,6 +11,7 @@ import rich.prompt
 
 HOME_DIR = os.path.expanduser("~")
 DOTFILES_DIR = os.path.join(HOME_DIR, "dotfiles")
+DEFAULT_REPO = "https://github.com/lycogno/dotfiles"
 
 
 def clone(repo: str):
@@ -109,11 +110,12 @@ def link(src: str, dst: str):
 def setup(repo: str):
     clone(repo)
     for relpath in walk(DOTFILES_DIR):
-        link(os.path.join(DOTFILES_DIR, relpath), os.path.join(HOME_DIR, relpath))
+        src = os.path.join(DOTFILES_DIR, relpath)
+        dst = os.path.join(HOME_DIR, relpath)
+        link(src, dst)
 
-
-DEFAULT_REPO = "https://github.com/avamsi/dotfiles"
-
+        if relpath.endswith(".sh"):
+            os.chmod(src, 0o755)
 
 def main():
     parser = argparse.ArgumentParser()
