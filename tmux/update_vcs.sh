@@ -26,9 +26,16 @@ if top="$(git -C "$path" rev-parse --show-toplevel 2>/dev/null)"; then
 fi
 
 # jj
-if jj_root="$(jj -R "$path" root 2>/dev/null)"; then
+if jj_root="$(
+  cd -- "$path" 2>/dev/null && jj root --ignore-working-copy --quiet 2>/dev/null
+)"; then
   jj_ws="$(basename "$jj_root")"
-  if jj_git_root="$(jj -R "$path" git root 2>/dev/null)"; then
+
+  if jj_git_root="$(
+    cd -- "$path" 2>/dev/null && jj git root --ignore-working-copy --quiet 2>/dev/null
+  )"; then
+    # `jj git root` prints the underlying Git directory (e.g. /path/to/repo/.git),
+    # so dirname(dirname(...)) is the working tree root.
     jj_main="$(basename "$(dirname "$jj_git_root")")"
   fi
 fi

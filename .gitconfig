@@ -1,6 +1,6 @@
 [user]
-	name = Vamsi Avula
-	email = avamsi07@gmail.com
+	name = Vishnu Hari
+	email = 33627388+lycogno@users.noreply.github.com
 
 [credential "https://github.com"]
 	helper = !gh auth git-credential

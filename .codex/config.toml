@@ -2,8 +2,8 @@
 # 	type = "sse"
 # 	url = "https://mcp.atlassian.com/v1/sse"
 
-model = "gpt-5"
-model_reasoning_effort = "high"
+model = "gpt-5.5"
+model_reasoning_effort = "xhigh"
 notify = ["say", "-v", "Bells", "Done!"]
 preferred_auth_method = "chatgpt"
 tools.web_search = true
