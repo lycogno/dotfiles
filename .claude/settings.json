@@ -1,6 +1,7 @@
 {
   "alwaysThinkingEnabled": true,
-  "effortLevel": "xhigh",
+  "autoCompactWindow": 400000,
+  "effortLevel": "medium",
   "extraKnownMarketplaces": {
     "marimo-pair": {
       "source": {
@@ -25,36 +26,7 @@
     "rust-analyzer-lsp@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true
   },
-  "env": {
-    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "42",
-    "CLAUDE_CODE_SUBAGENT_MODEL": "opus[1m]"
-  },
   "fastMode": true,
-  "hooks": {
-    "Notification": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "say -v Bells Done!"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "agent",
-            "prompt": "- Review $ARGUMENTS\n- Commit existing changes iff they are standalone and mergeable\n- Do not make changes; only instruct the primary agent\n- Return {\"ok\": true} iff all user requests are addressed\n- Return {\"ok\": false, \"reason\": \"<missing requested work>\"} otherwise",
-            "model": "claude-sonnet-5[1m]",
-            "statusMessage": "Nikeing..",
-            "timeout": 300
-          }
-        ]
-      }
-    ]
-  },
   "includeGitInstructions": false,
   "model": "fable[1m]",
   "permissions": {
@@ -64,13 +36,11 @@
       "Bash(jj *)",
       "Bash(uv run pytest *)",
       "Edit",
-      "MultiEdit",
       "NotebookEdit",
       "Skill",
       "WebFetch",
       "WebSearch",
-      "Write",
-      "mcp__chrome-devtools"
+      "Write"
     ],
     "defaultMode": "auto"
   },
