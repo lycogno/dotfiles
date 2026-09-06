@@ -16,6 +16,10 @@
     "key": null
   },
   {
+    "command": "closeOtherTabs",
+    "key": null
+  },
+  {
     "command": "composer.openModelPicker",
     "key": null
   },
@@ -104,6 +108,10 @@
     "key": null
   },
   {
+    "command": "openAvatarOverlay",
+    "key": null
+  },
+  {
     "command": "openBrowserTab",
     "key": null
   },
@@ -180,6 +188,10 @@
     "key": null
   },
   {
+    "command": "stepWorkspaceLayout",
+    "key": null
+  },
+  {
     "command": "switchToMode1",
     "key": null
   },
@@ -229,10 +241,6 @@
   },
   {
     "command": "toggleBottomPanel",
-    "key": null
-  },
-  {
-    "command": "toggleBrowserPanel",
     "key": null
   },
   {
