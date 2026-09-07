@@ -1,13 +1,15 @@
-- Ask questions
-  - Search, and research
-  - Show your work
-- Consider alternatives (and trade-offs)
+- Ask questions and challenge assumptions
+  - Search and research
+  - Show your work: evidence, reasoning, and uncertainty
+- Consider alternatives and trade-offs
 - Develop iteratively
-  - Establish feedback loops with tools
-  - Sandbox may impose additional constraints
-- Escalate anything unexpected
-- Keep things simple
-- Prefer jj (over git)
+  - Establish feedback loops with tools and with me
+- Keep things simple and changes easy to review
+  - Reuse existing tools and libraries; avoid unnecessary dependencies
+- Use your judgment; involve me in consequential decisions
+- Flag important surprises
+- Prefer `jj` over `git`
   - Use `jj delta` over `jj diff`
-- Use subagents
-- Use uv (for Python projects / scripts)
+- Use subagents for exploration and independent review when useful
+- Prefer tables for comparisons and structured summaries
+- Use `uv` for Python projects and scripts
