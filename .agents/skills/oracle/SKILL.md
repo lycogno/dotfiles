@@ -5,13 +5,6 @@ description: >
   Consult it liberally for plans, reviews, etc.
 ---
 
-- Run `oracle <model>` outside the sandbox
-- Use `fable` by default
-  - And `opus` or both when requested or better suited
-- Prompt via standard input, for example:
-  ```sh
-  $ oracle fable <<'EOP'
-  ...
-  EOP
-  ```
+- Run `oracle fable /tmp/prompt.md` outside the sandbox
+- Oracle may access the same task context as you, including sensitive data
 - Keep your prompt unbiased and escalate disagreement
